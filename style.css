@@ -1,0 +1,65 @@
+#container{
+    width: 98%;
+    height: 94vh;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #FE2DA3;
+    background-color: #FCAFD9;
+    box-shadow: 4px 4px 8px rgba(252, 175, 217, 0.6), -4px -4px 8px rgba(252, 175, 217, 0.3);
+}
+
+p{
+    text-align: center;
+    font-size: 24px;
+    color:#AC019B;
+    font-weight: bold;
+}
+
+textarea{
+    width: 85%;
+    height: 65%;
+    border: 1px solid #FE2DA3;
+    margin-left: 7%;
+    padding-top: 20px;
+    padding-left: 10px; 
+    background-color: rgba(255, 255, 255, 0.722);
+    font-size: 18px;
+    outline: none;
+    box-shadow: 3px 3px 6px rgba(254, 45, 163, 0.4), -3px -3px 6px rgba(254, 45, 163, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+textarea:focus{
+    box-shadow: 4px 4px 8px rgba(254, 45, 163, 0.6), -4px -4px 8px rgba(254, 45, 163, 0.3);
+}
+
+#buttons{
+    width:90%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button{
+    margin-left: 50px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: none;
+}
+#save{
+    background-color: #5b8402;
+    box-shadow: 3px 3px 6px rgba(91, 132, 2, 0.4), -3px -3px 6px rgba(91, 132, 2, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+#save:hover{
+    box-shadow: 4px 4px 8px rgba(91, 132, 2, 0.6), -4px -4px 8px rgba(91, 132, 2, 0.3);
+}
+#cancel{
+    background-color: #72076E;
+    box-shadow: 3px 3px 6px rgba(114, 7, 110, 0.4), -3px -3px 6px rgba(114, 7, 110, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+#cancel:hover{
+    box-shadow: 4px 4px 8px rgba(114, 7, 110, 0.6), -4px -4px 8px rgba(114, 7, 110, 0.3);
+}
