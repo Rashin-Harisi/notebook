@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     saveButton.addEventListener('click',()=>{
         window.api.save(text.value)
     })
-    const cancelButton = document.getElementById('cancel')
-    cancelButton.addEventListener('click',()=>{
-        window.api.cancel()
+    const openButton = document.getElementById('open')
+    openButton.addEventListener('click',()=>{
+        window.api.open()
     })
     
     window.api.successStatus((res)=> {
@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     
     window.api.failStatus((res)=> {
         alert(res)
+    })
+
+    window.api.openFile((res)=>{
+        text.value = res
     })
 
 })

@@ -54,11 +54,28 @@ const createWindow = () => {
       }
     })
 
+    ipcMain.on('open', async(event,arg)=>{
+      const {canceled,filePaths}= await dialog.showOpenDialog(win, {
+        defaultPath: path.join("C:/Users/Rashin/Documents/Files"),
+        filters: [
+          {name: "text", extensions:['txt'] }
+        ],
+        properties:["openFile"]
+      })
+      console.log(filePaths[0])
+
+      if(!canceled && filePaths && filePaths[0]){
+        const content = fs.readFileSync(filePaths[0],'utf8')
+        if(!canceled && filePaths && filePaths[0]){
+          event.reply("openFile",content)
+          console.log(content)}
+      }else{
+        console.log("Something went wrong!");
+      }
+    })
   }
 
-  ipcMain.on('cancel', (event,arg)=>{
-    if (process.platform !== 'darwin') app.quit()
-  })
+  
 
   app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit()

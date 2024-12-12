@@ -6,7 +6,8 @@ contextBridge.exposeInMainWorld("api",{
     save : (text)=> ipcRenderer.send("save",text) ,
     successStatus : (callback)=>ipcRenderer.on("success",(event,arg)=>{callback(arg)}),
     failStatus: (callback)=>ipcRenderer.on("failed",(event,arg)=>{callback(arg)}),
-    cancel : () => ipcRenderer.send('cancel')
+    open : () => ipcRenderer.send('open'),
+    openFile : (callback)=>ipcRenderer.on("openFile",(event,arg)=>{callback(arg)})
 })
 
 

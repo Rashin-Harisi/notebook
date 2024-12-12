@@ -55,11 +55,11 @@ button{
 #save:hover{
     box-shadow: 4px 4px 8px rgba(91, 132, 2, 0.6), -4px -4px 8px rgba(91, 132, 2, 0.3);
 }
-#cancel{
+#open{
     background-color: #72076E;
     box-shadow: 3px 3px 6px rgba(114, 7, 110, 0.4), -3px -3px 6px rgba(114, 7, 110, 0.2);
     transition: box-shadow 0.3s ease;
 }
-#cancel:hover{
+#open:hover{
     box-shadow: 4px 4px 8px rgba(114, 7, 110, 0.6), -4px -4px 8px rgba(114, 7, 110, 0.3);
 }
